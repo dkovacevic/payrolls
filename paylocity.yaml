@@ -1,0 +1,26 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+  adminConnectors:
+    - type: http
+      port: 8081
+
+swagger:
+  resourcePackage: org.examples.paylocity.resources
+  title: Paylocity Swagger
+  description: Benefits API
+  contactEmail: dejan@wire.com
+  license: GPLv3
+  version: 1.17.0
+  schemes:
+    - http
+    - https
+
+database:
+  driverClass: org.postgresql.Driver
+  url: ${DB_URL:-jdbc:postgresql://localhost/paylocity}
+  user: ${DB_USER:-}
+  password: ${DB_PASSWORD:-}
+
