@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="various fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" afterDir="false" />
+    <list default="true" id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="Update employee balance upon payroll run">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeBenefitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeBenefitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paylocity.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/paylocity.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity/tests"
+    "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,8 +68,8 @@
       <recent name="org.examples.paylocity.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/src/main/java/org/examples/paylocity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -121,23 +123,20 @@
       <option name="project" value="LOCAL" />
       <updated>1683109069964</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update employee balance upon payroll run">
+      <created>1683115036936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683115036936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first draft" />
     <MESSAGE value="various fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="various fixes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeeBenefitsResource.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Update employee balance upon payroll run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update employee balance upon payroll run" />
   </component>
 </project>

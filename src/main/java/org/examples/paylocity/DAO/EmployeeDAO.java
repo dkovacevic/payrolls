@@ -20,7 +20,10 @@ public interface EmployeeDAO {
     Employee get(@Bind("clientId") Integer clientId, @Bind("employeeId") Integer employeeId);
 
     @SqlUpdate("UPDATE Employee SET benefit_balance = benefit_balance - :paid WHERE employee_id = :employeeId")
-    int updateBalance(@Bind("employeeId") Integer employeeId, @Bind("paid") Float paid);
+    int decreaseBalance(@Bind("employeeId") Integer employeeId, @Bind("paid") Float paid);
+
+    @SqlUpdate("UPDATE Employee SET benefit_balance = benefit_balance + :paid WHERE employee_id = :employeeId")
+    int increaseBalance(@Bind("employeeId") Integer employeeId, @Bind("paid") Float paid);
 
     class _Mapper implements RowMapper<Employee> {
         @Override

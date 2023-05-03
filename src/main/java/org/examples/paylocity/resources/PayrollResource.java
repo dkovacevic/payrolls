@@ -60,7 +60,7 @@ public class PayrollResource {
             }
 
             // Update Employee Balance
-            employeeDAO.updateBalance(runPayroll.employeeId, paycheck.benefits);
+            employeeDAO.decreaseBalance(runPayroll.employeeId, paycheck.benefits);
 
             // Update Paid flag in Employee_Balance
             employeeBenefitDAO.markAllAsPaid(runPayroll.employeeId);

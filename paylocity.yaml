@@ -26,5 +26,6 @@ database:
   user: ${DB_USER:-}
   password: ${DB_PASSWORD:-}
 
-gross: ${GROSS_SALARY:-}
-allowance: ${ALLOWANCE:-}
+gross: ${GROSS_SALARY:-2000}
+allowance: ${ALLOWANCE:-1000}
+allowanceDependant: ${ALLOWANCE_DEPENDANT:-500}

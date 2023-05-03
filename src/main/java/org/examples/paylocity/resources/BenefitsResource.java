@@ -54,7 +54,7 @@ public class BenefitsResource {
     @ApiOperation(value = "Get benefit by id", response = Benefit.class)
     public Response getBenefit(@ApiParam @PathParam("benefitId") Integer benefitId) {
         try {
-            // Get get benefit from the db
+            // Get benefit from the db
             BenefitDAO.Benefit dbo = benefitDAO.get(benefitId);
             Benefit benefit = new Benefit(dbo.id, dbo.name, dbo.price);
 

@@ -15,6 +15,9 @@ public class Config extends Configuration {
     public Float allowance;
 
     @JsonProperty
+    public Float allowanceDependant;
+
+    @JsonProperty
     @NotNull
     public DataSourceFactory database;
 
