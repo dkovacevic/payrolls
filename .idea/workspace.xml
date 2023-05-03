@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="Update employee balance upon payroll run">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Update employee balance upon new dependant">
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paylocity.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/paylocity.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,106 +27,35 @@
     <setting file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.6.2/swagger-annotations-1.6.2-sources.jar!/io/swagger/annotations/ApiOperation.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-17.0.2/Contents/Home/lib/src.zip!/java.base/java/util/Optional.java" root0="SKIP_INSPECTION" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2Ovvi3TtQzonsXWyQwSCmXbvcvX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.examples.paylocity.models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/src/main/java/org/examples/paylocity" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.examples.paylocity.resources" />
-      <recent name="" />
-      <recent name="org.examples.paylocity.DAO" />
-      <recent name="org.examples.paylocity" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.examples.paylocity.App" />
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="paylocity" />
-      <option name="PROGRAM_PARAMETERS" value="server paylocity.yaml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.examples.paylocity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.App" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="paylocity" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="" />
-      <created>1682453993814</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1682453993814</updated>
-    </task>
-    <task id="LOCAL-00001" summary="first draft">
-      <created>1683051457642</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1683051457642</updated>
-    </task>
-    <task id="LOCAL-00002" summary="various fixes">
-      <created>1683109069964</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1683109069964</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update employee balance upon payroll run">
-      <created>1683115036936</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1683115036936</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="first draft" />
-    <MESSAGE value="various fixes" />
-    <MESSAGE value="Update employee balance upon payroll run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update employee balance upon payroll run" />
   </component>
 </project>

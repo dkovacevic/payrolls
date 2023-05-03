@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  paylocity:
+    build:
+      context: .
+    image: paylocity
+    environment:
+      - DB_URL=jdbc:postgresql://db/paylocity
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  db:
+    image: postgres:11.5-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=paylocity
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql/data/
+volumes:
+  db:

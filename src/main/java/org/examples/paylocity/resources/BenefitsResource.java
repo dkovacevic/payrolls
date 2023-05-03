@@ -56,6 +56,12 @@ public class BenefitsResource {
         try {
             // Get benefit from the db
             BenefitDAO.Benefit dbo = benefitDAO.get(benefitId);
+            if (dbo == null) {
+                return Response.
+                        status(404).
+                        entity(new ErrorMessage(404, "Unknown benefit")).
+                        build();
+            }
             Benefit benefit = new Benefit(dbo.id, dbo.name, dbo.price);
 
             return Response
@@ -79,7 +85,7 @@ public class BenefitsResource {
             if (rows == 0) {
                 return Response.
                         status(404).
-                        entity(new ErrorMessage("Unknown benefitId")).
+                        entity(new ErrorMessage(404, "Unknown benefitId")).
                         build();
             }
             return Response
