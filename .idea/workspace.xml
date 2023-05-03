@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="first draft">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c91c12a4-6690-4bda-b484-eebf3ec39534" name="Changes" comment="various fixes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paylocity.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/paylocity.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/BenefitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/BenefitDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeBenefitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeBenefitDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/PaycheckDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/DAO/PaycheckDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Benefit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Benefit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Dependant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Dependant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Paycheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/models/Paycheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/DependantResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeeBenefitsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeeBenefitsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity"
+    "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity/tests"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,6 +66,7 @@
       <recent name="org.examples.paylocity.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/org/examples/paylocity" />
     </key>
@@ -126,12 +114,20 @@
       <option name="project" value="LOCAL" />
       <updated>1683051457642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="various fixes">
+      <created>1683109069964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683109069964</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="first draft" />
+    <MESSAGE value="various fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="various fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,8 +8,7 @@ import io.swagger.annotations.ApiParam;
 import org.examples.paylocity.DAO.EmployeeBenefitDAO;
 import org.examples.paylocity.DAO.EmployeeDAO;
 import org.examples.paylocity.DAO.PaycheckDAO;
-import org.examples.paylocity.models.Client;
-import org.examples.paylocity.models.Employee;
+import org.examples.paylocity.Util;
 import org.examples.paylocity.models.Paycheck;
 import org.jdbi.v3.core.Jdbi;
 
@@ -19,7 +18,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-import java.util.Date;
 
 @Api
 @Path("/admin/payrolls")
@@ -44,6 +42,8 @@ public class PayrollResource {
         try {
             Paycheck paycheck = generatePaycheck(clientId, runPayroll.employeeId);
 
+            //todo Run these 3 db updates in a transaction
+
             paycheck.id = paycheckDAO.insert(clientId,
                     paycheck.employee.id,
                     runPayroll.start,
@@ -59,8 +59,11 @@ public class PayrollResource {
                         build();
             }
 
-            // todo update Employee Balance
-            // todo Update Paid flag in Employee_Balance
+            // Update Employee Balance
+            employeeDAO.updateBalance(runPayroll.employeeId, paycheck.benefits);
+
+            // Update Paid flag in Employee_Balance
+            employeeBenefitDAO.markAllAsPaid(runPayroll.employeeId);
 
             return Response
                     .ok(paycheck)
@@ -107,7 +110,14 @@ public class PayrollResource {
                         entity(new ErrorMessage("Unknown paycheck")).
                         build();
             }
+
             EmployeeDAO.Employee employee = employeeDAO.get(clientId, paycheck.employeeId);
+            if (employee == null) {
+                return Response.
+                        status(404).
+                        entity(new ErrorMessage(404, "Unknown Client or Employee")).
+                        build();
+            }
 
             Paycheck ret = new Paycheck();
             ret.id = paycheck.id;
@@ -116,15 +126,8 @@ public class PayrollResource {
             ret.gross = paycheck.grossSalary;
             ret.total = paycheck.benefitsPaid + paycheck.netSalary;
 
-            ret.client = new Client();
-            ret.client.id = employee.clientId;
-            ret.client.name = employee.clientName;
-
-            ret.employee = new Employee();
-            ret.employee.id = employee.employeeId;
-            ret.employee.name = employee.employeeName;
-            ret.employee.gross = employee.gross;
-            ret.employee.balance = employee.benefitBalance;
+            ret.client = Util.toClient(employee);
+            ret.employee = Util.toModel(employee);
 
             return Response
                     .ok(ret)
@@ -153,22 +156,21 @@ public class PayrollResource {
 
     private Paycheck generatePaycheck(Integer clientId, Integer employeeId) {
         Paycheck paycheck = new Paycheck();
-        paycheck.employee = new Employee();
-        paycheck.client = new Client();
 
         EmployeeDAO.Employee employee = employeeDAO.get(clientId, employeeId);
-        paycheck.employee.id = employee.employeeId;
-        paycheck.employee.name = employee.employeeName;
-        paycheck.employee.gross = employee.gross;
-        paycheck.employee.balance = employee.benefitBalance;
-        paycheck.client.id = employee.clientId;
-        paycheck.client.name = employee.clientName;
+        if (employee == null) {
+            throw new RuntimeException("Unknown client of employee");
+        }
 
+        // Calculate the remaining benefit balance for the employee and the total benefits paid by the Client
         ArrayList<EmployeeBenefitDAO.Benefit> benefits = employeeBenefitDAO.selectAllBenefitsForEmployee(employeeId);
         for (EmployeeBenefitDAO.Benefit benefit : benefits) {
             employee.benefitBalance -= benefit.price;
             paycheck.benefits += benefit.price;
         }
+
+        paycheck.employee = Util.toModel(employee);
+        paycheck.client = Util.toClient(employee);
 
         paycheck.gross = employee.gross;
         paycheck.net = paycheck.gross - (0.32f * paycheck.gross);

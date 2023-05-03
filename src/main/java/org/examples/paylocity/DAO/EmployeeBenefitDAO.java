@@ -36,6 +36,9 @@ public interface EmployeeBenefitDAO {
     @RegisterRowMapper(_Mapper.class)
     ArrayList<Benefit> selectAllBenefitsForEmployee(@Bind("employeeId") Integer employeeId);
 
+    @SqlUpdate("UPDATE Employee_Benefit SET paid = TRUE WHERE employee_id = :employeeId")
+    int markAllAsPaid(@Bind("employeeId") Integer employeeId);
+
     class _Mapper implements RowMapper<Benefit> {
         @Override
         public Benefit map(ResultSet resultSet, StatementContext ctx) throws SQLException {

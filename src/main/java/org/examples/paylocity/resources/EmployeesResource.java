@@ -5,6 +5,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.examples.paylocity.DAO.EmployeeDAO;
+import org.examples.paylocity.Util;
 import org.examples.paylocity.models.Employee;
 import org.jdbi.v3.core.Jdbi;
 
@@ -37,12 +38,7 @@ public class EmployeesResource {
                         build();
             }
 
-            Employee employee = new Employee();
-            employee = new Employee();
-            employee.id = dbo.employeeId;
-            employee.name = dbo.employeeName;
-            employee.gross = dbo.gross;
-            employee.balance = dbo.benefitBalance;
+            Employee employee = Util.toModel(dbo);
 
             return Response
                     .ok(employee)

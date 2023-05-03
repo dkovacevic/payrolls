@@ -5,6 +5,7 @@ import org.jdbi.v3.core.statement.StatementContext;
 import org.jdbi.v3.sqlobject.config.RegisterRowMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
+import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,9 @@ public interface EmployeeDAO {
             "WHERE client_id = :clientId AND employee_id = :employeeId" )
     @RegisterRowMapper(_Mapper.class)
     Employee get(@Bind("clientId") Integer clientId, @Bind("employeeId") Integer employeeId);
+
+    @SqlUpdate("UPDATE Employee SET benefit_balance = benefit_balance - :paid WHERE employee_id = :employeeId")
+    int updateBalance(@Bind("employeeId") Integer employeeId, @Bind("paid") Float paid);
 
     class _Mapper implements RowMapper<Employee> {
         @Override
