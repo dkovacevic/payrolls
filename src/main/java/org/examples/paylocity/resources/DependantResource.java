@@ -3,6 +3,7 @@ package org.examples.paylocity.resources;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.jersey.errors.ErrorMessage;
 import io.dropwizard.validation.OneOf;
+import io.swagger.annotations.Api;
 import org.examples.paylocity.DAO.DependantDAO;
 import org.examples.paylocity.models.Dependant;
 import org.jdbi.v3.core.Jdbi;
@@ -28,9 +29,9 @@ public class DependantResource {
     }
 
     @POST
-    @ApiOperation(value = "Add new dependant for the Employee")
+    @ApiOperation(value = "Add new dependant for the Employee", response = Dependant.class)
     public Response insertDependant(@ApiParam @NotNull @HeaderParam("p__employee_id") Integer employeeId,
-                           @ApiParam @Valid _NewDependant dependant) {
+                                    @ApiParam @Valid _NewDependant dependant) {
         try {
             // Insert into DB
             int dependantId = dependantDAO.insert(dependant.name, employeeId);
@@ -39,7 +40,7 @@ public class DependantResource {
             DependantDAO.Dependant dbo = dependantDAO.get(dependantId);
 
             // Copy dbo into model class
-            Dependant res = new Dependant(dbo.name, dbo.id, dbo.employeeId);
+            Dependant res = new Dependant(dbo.id, dbo.name, dbo.employeeId);
 
             return Response
                     .ok(res)
@@ -53,7 +54,7 @@ public class DependantResource {
     }
 
     @GET
-    @ApiOperation(value = "Get all dependants for the Employee")
+    @ApiOperation(value = "Get all dependants for the Employee", response = Dependant.class, responseContainer = "List")
     public Response listDependants(@ApiParam @NotNull @HeaderParam("p__employee_id") Integer employeeId) {
         try {
             // Get all dbo for the employeeID
@@ -61,7 +62,7 @@ public class DependantResource {
 
             // Copy dbo into model class
             List<Dependant> result = dependants.stream()
-                    .map(x -> new Dependant(x.name, x.id, x.employeeId))
+                    .map(x -> new Dependant(x.id, x.name, x.employeeId))
                     .toList();
 
             return Response

@@ -1,4 +1,5 @@
 server:
+  rootPath: /api/v1
   applicationConnectors:
     - type: http
       port: 8080
@@ -8,12 +9,13 @@ server:
       port: 8081
 
 swagger:
+  prefix: /api/v1
   resourcePackage: org.examples.paylocity.resources
   title: Paylocity Swagger
   description: Benefits API
   contactEmail: dejan@wire.com
   license: GPLv3
-  version: 1.17.0
+  version: 1.0.0
   schemes:
     - http
     - https
@@ -24,3 +26,5 @@ database:
   user: ${DB_USER:-}
   password: ${DB_PASSWORD:-}
 
+gross: ${GROSS_SALARY:-}
+allowance: ${ALLOWANCE:-}

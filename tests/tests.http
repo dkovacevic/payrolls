@@ -1,0 +1,57 @@
+### Get myself
+GET {{host}}/api/v1/employees/self
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+p__client_id: {{client_id}}
+
+### Get my family
+GET {{host}}/api/v1/dependants
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+
+### Get all available benefits
+GET {{host}}/api/v1/benefits
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+
+### Get all my benefits that are NOT PAID
+GET {{host}}/api/v1/employees/benefits?paid=false
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+
+### Get all my benefits
+GET {{host}}/api/v1/employees/benefits
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+
+### Subscribe to a benefit
+POST {{host}}/api/v1/employees/benefits
+Content-Type: application/json
+p__employee_id: {{employee_id}}
+
+{
+  "benefitId": 2,
+  "dependant": false,
+  "name": "Bob"
+}
+
+### Preview next Paycheck
+GET {{host}}/api/v1/admin/payrolls/preview?employee={{employee_id}}
+Content-Type: application/json
+p__client_id: {{client_id}}
+
+### Run payroll for the Employee
+POST {{host}}/api/v1/admin/payrolls
+Content-Type: application/json
+p__client_id: {{client_id}}
+
+{
+  "employeeId": "{{employee_id}}",
+  "start": "2023-04-01",
+  "end": "2023-04-15"
+}
+
+### Get Paycheck by ID
+GET {{host}}/api/v1/admin/payrolls/paychecks?id={{paycheck_id}}
+Content-Type: application/json
+p__client_id: {{client_id}}

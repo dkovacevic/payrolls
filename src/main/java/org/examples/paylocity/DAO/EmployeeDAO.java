@@ -10,11 +10,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public interface EmployeeDAO {
-    @SqlQuery("SELECT E.*, C.* " +
-            "FROM Employee AS E " +
-            "JOIN Client AS C " +
-            "USING(employee_id) " +
-            "WHERE employee_id = :employeeId AND client_id = :clientId")
+    @SqlQuery("SELECT E.*, C.*, E.name as employee, C.name AS Client " +
+            "FROM Client AS C " +
+            "JOIN Employee AS E " +
+            "USING(client_id) " +
+            "WHERE client_id = :clientId AND employee_id = :employeeId" )
     @RegisterRowMapper(_Mapper.class)
     Employee get(@Bind("clientId") Integer clientId, @Bind("employeeId") Integer employeeId);
 
@@ -24,8 +24,8 @@ public interface EmployeeDAO {
             Employee ret = new Employee();
             ret.employeeId = resultSet.getInt("employee_id");
             ret.clientId = resultSet.getInt("client_id");
-            ret.employeeName = resultSet.getString("E.name");
-            ret.clientName = resultSet.getString("C.name");
+            ret.employeeName = resultSet.getString("Employee");
+            ret.clientName = resultSet.getString("Client");
             ret.clientId = resultSet.getInt("client_id");
             ret.benefitBalance = resultSet.getFloat("benefit_balance");
             ret.gross = resultSet.getFloat("gross");

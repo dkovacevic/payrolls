@@ -13,7 +13,7 @@ public class Paycheck {
     public Employee employee;
 
     @JsonProperty
-    public Float benefits;
+    public Float benefits = 0f;
     @JsonProperty
     public Float gross;
     @JsonProperty

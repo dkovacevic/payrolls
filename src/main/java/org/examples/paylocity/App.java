@@ -10,9 +10,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
-import org.examples.paylocity.resources.BenefitsResource;
-import org.examples.paylocity.resources.DependantResource;
-import org.examples.paylocity.resources.EmployeeBenefitsResource;
+import org.examples.paylocity.resources.*;
 import org.flywaydb.core.Flyway;
 import org.jdbi.v3.core.Jdbi;
 import io.prometheus.client.CollectorRegistry;
@@ -56,9 +54,11 @@ public class App extends Application<Config> {
                 .load();
         flyway.migrate();
 
+        environment.jersey().register(new EmployeesResource(jdbi));
         environment.jersey().register(new BenefitsResource(jdbi));
         environment.jersey().register(new DependantResource(jdbi));
         environment.jersey().register(new EmployeeBenefitsResource(jdbi));
+        environment.jersey().register(new PayrollResource(jdbi));
 
         CollectorRegistry.defaultRegistry.register(new DropwizardExports(metrics));
         environment.getApplicationContext().addServlet(MetricsServlet.class, "/metrics");

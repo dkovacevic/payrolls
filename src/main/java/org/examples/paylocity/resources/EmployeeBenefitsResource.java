@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 
 @Api
-@Path("employees/benefits")
+@Path("/employees/benefits")
 @Produces(MediaType.APPLICATION_JSON)
 public class EmployeeBenefitsResource {
     private final BenefitDAO benefitDAO;
@@ -58,11 +58,13 @@ public class EmployeeBenefitsResource {
     }
 
     @GET
-    @ApiOperation(value = "List all benefits for the Employee")
+    @ApiOperation(value = "List all benefits for the Employee",
+            responseContainer = "List",
+            response = BenefitDAO.Benefit.class)
     public Response allBenefitsForEmployee(@ApiParam @NotNull @HeaderParam("p__employee_id") Integer employeeId,
                                            @ApiParam @QueryParam("paid") Boolean paid) {
         try {
-            if(paid != null){
+            if (paid != null) {
                 // Get all employee's benefits filtered by 'paid' status
                 ArrayList<BenefitDAO.Benefit> all = benefitDAO.selectAllBenefitsForEmployee(employeeId, paid);
 

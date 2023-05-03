@@ -10,4 +10,5 @@ public class Employee {
     public String name;
     @JsonProperty
     public Float gross;
+    public Float balance;
 }

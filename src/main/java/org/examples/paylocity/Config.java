@@ -9,12 +9,19 @@ import javax.validation.constraints.NotNull;
 
 public class Config extends Configuration {
     @JsonProperty
-    public String domain;
+    public Float gross;
+
+    @JsonProperty
+    public Float allowance;
 
     @JsonProperty
     @NotNull
     public DataSourceFactory database;
 
+    @JsonProperty
     public SwaggerBundleConfiguration swagger;
 
+    public SwaggerBundleConfiguration getSwagger() {
+        return swagger;
+    }
 }

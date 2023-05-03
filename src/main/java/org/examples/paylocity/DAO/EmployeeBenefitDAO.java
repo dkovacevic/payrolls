@@ -28,6 +28,7 @@ public interface EmployeeBenefitDAO {
             "EB.price, " +
             "B.name AS Benefit, " +
             "EB.dependant, " +
+            "EB.paid " +
             "FROM Employee_Benefit AS EB " +
             "JOIN Benefit AS B " +
             "USING(benefit_id) " +
