@@ -127,7 +127,7 @@ public class PayrollResource {
             ret.total = paycheck.benefitsPaid + paycheck.netSalary;
 
             ret.client = Util.toClient(employee);
-            ret.employee = Util.toModel(employee);
+            ret.employee = Util.toEmployee(employee);
 
             return Response
                     .ok(ret)
@@ -169,7 +169,7 @@ public class PayrollResource {
             paycheck.benefits += benefit.price;
         }
 
-        paycheck.employee = Util.toModel(employee);
+        paycheck.employee = Util.toEmployee(employee);
         paycheck.client = Util.toClient(employee);
 
         paycheck.gross = employee.gross;

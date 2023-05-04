@@ -5,7 +5,7 @@ import org.examples.paylocity.models.Client;
 import org.examples.paylocity.models.Employee;
 
 public class Util {
-    public static Employee toModel(EmployeeDAO.Employee dbo) {
+    public static Employee toEmployee(EmployeeDAO.Employee dbo) {
         Employee employee = new Employee();
         employee.id = dbo.employeeId;
         employee.name = dbo.employeeName;

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Update employee balance upon new dependant">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+    <list default="true" id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Docker">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swagger.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/BenefitsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,18 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Docker">
+      <created>1683135041223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683135041223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker" />
   </component>
 </project>

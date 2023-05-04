@@ -38,7 +38,7 @@ public class EmployeesResource {
                         build();
             }
 
-            Employee employee = Util.toModel(dbo);
+            Employee employee = Util.toEmployee(dbo);
 
             return Response
                     .ok(employee)
