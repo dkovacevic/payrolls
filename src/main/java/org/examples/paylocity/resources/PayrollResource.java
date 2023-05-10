@@ -10,6 +10,8 @@ import org.examples.paylocity.DAO.EmployeeDAO;
 import org.examples.paylocity.DAO.PaycheckDAO;
 import org.examples.paylocity.Util;
 import org.examples.paylocity.models.Paycheck;
+import org.jdbi.v3.core.Handle;
+import org.jdbi.v3.core.HandleConsumer;
 import org.jdbi.v3.core.Jdbi;
 
 import javax.validation.Valid;
@@ -43,7 +45,6 @@ public class PayrollResource {
             Paycheck paycheck = generatePaycheck(clientId, runPayroll.employeeId);
 
             //todo Run these 3 db updates in a transaction
-
             paycheck.id = paycheckDAO.insert(clientId,
                     paycheck.employee.id,
                     runPayroll.start,

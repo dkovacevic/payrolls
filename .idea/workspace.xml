@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Docker">
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swagger.png" afterDir="false" />
+    <list default="true" id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Readme.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/EmployeesResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/examples/paylocity/resources/PayrollResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,34 +25,30 @@
     <setting file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.6.2/swagger-annotations-1.6.2-sources.jar!/io/swagger/annotations/ApiOperation.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-17.0.2/Contents/Home/lib/src.zip!/java.base/java/util/Optional.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PLJzedO1GOQPAduFLY5iA4uxhT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "/Users/dejankovacevic/Interviews/Paylocity"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dejankovacevic/Interviews/Paylocity&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="paylocity" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="paylocity" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Docker">
       <created>1683135041223</created>
@@ -65,11 +57,26 @@
       <option name="project" value="LOCAL" />
       <updated>1683135041223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Readme.md">
+      <created>1683188643105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683188643105</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c58644e0-45c3-41ee-91a8-260779c17c11" name="Changes" comment="Readme.md" />
+      <created>1683230694164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683230694164</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker" />
+    <MESSAGE value="Readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md" />
   </component>
 </project>
