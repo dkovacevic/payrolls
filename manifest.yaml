@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paylocity-app
+  namespace: staging
+  labels:
+    app: paylocity
+
+spec:
+  selector:
+    matchLabels:
+      app: paylocity
+
+  replicas: 3
+
+  template:
+    metadata:
+      labels:
+        app: paylocity
+      annotations:
+
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: paylocity
+          image: docker.io/dejankovacevic/paylocity:latest
+          imagePullPolicy: Always
+
+          env:
+            - name: DB_URL
+              value: jdbc:postgresql://db.staging.svc.cluster.local/paylocity
+
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secrets
+                  key: db-user
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secrets
+                  key: db-password
+
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: paylocity-service
+  namespace: staging
+spec:
+  selector:
+    app: paylocity
+  type: NodePort
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      protocol: TCP
